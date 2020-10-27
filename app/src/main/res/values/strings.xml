@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">JobJob</string>
+    <string-array name="Spinner_items">
+        <item>Plomero</item>
+        <item>Electricista</item>
+
+
+    </string-array>
+</resources>

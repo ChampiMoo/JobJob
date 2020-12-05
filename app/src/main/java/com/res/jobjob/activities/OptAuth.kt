@@ -9,6 +9,7 @@ import androidx.appcompat.widget.Toolbar
 import com.res.jobjob.R
 import com.res.jobjob.activities.clientes.RegistroCliente
 import com.res.jobjob.activities.socios.RegistroSocios
+import com.res.jobjob.includes.MyToolbar
 
 class OptAuth : AppCompatActivity() {
 
@@ -20,12 +21,9 @@ class OptAuth : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_opt_auth)
-        mToolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(mToolbar)
-        supportActionBar!!.title = "Seleccionar opcion"
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        btnLogin = findViewById(R.id.btnLogin)
-        btnRegistrar = findViewById(R.id.btnRegistrar)
+        MyToolbar.show(this, "Seleccionar opcion", true)
+        btnLogin = findViewById(R.id.iniciar_button)
+        btnRegistrar = findViewById(R.id.registrar_button)
         mPref = applicationContext.getSharedPreferences("typeUser", MODE_PRIVATE)
         btnLogin.setOnClickListener{ irLogin() }
         btnRegistrar.setOnClickListener{ irRegistrar() }

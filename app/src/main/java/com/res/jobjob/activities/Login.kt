@@ -30,10 +30,10 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         MyToolbar.show(this, "Login de usuario", true)
-        mtextInputCorreo = findViewById(R.id.textInputCorreoS)
-        mtextInputPass = findViewById(R.id.textInputPassS)
+        mtextInputCorreo = findViewById(R.id.correo_textEdit)
+        mtextInputPass = findViewById(R.id.password_textEdit)
         mPref = applicationContext.getSharedPreferences("typeUser", MODE_PRIVATE)
-        btnLoginL = findViewById(R.id.btnLoginL)
+        btnLoginL = findViewById(R.id.login_button)
         mDialog = SpotsDialog.Builder().setContext(this@Login).setMessage("Espere un momento").build()
         mAuth = FirebaseAuth.getInstance()
         mDatabase = FirebaseDatabase.getInstance().reference

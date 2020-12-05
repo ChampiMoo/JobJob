@@ -2,20 +2,34 @@
   <dictionary name="erik">
     <words>
       <w>actived</w>
+      <w>cancelar</w>
       <w>cliente</w>
+      <w>clientes</w>
+      <w>completo</w>
+      <w>conectarse</w>
       <w>contraseña</w>
       <w>correo</w>
       <w>crear</w>
+      <w>cuenta</w>
+      <w>cuento</w>
+      <w>desconectarse</w>
+      <w>disconect</w>
       <w>geocoder</w>
       <w>geofire</w>
+      <w>ingresar</w>
+      <w>iniciar</w>
+      <w>lugar</w>
       <w>nombre</w>
       <w>oficio</w>
       <w>opcion</w>
       <w>pudo</w>
+      <w>registrarme</w>
       <w>registro</w>
       <w>seleccionar</w>
       <w>socio</w>
       <w>socios</w>
+      <w>solicitar</w>
+      <w>telefono</w>
       <w>usuario</w>
     </words>
   </dictionary>

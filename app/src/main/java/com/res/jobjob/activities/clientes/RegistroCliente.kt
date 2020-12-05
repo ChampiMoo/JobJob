@@ -33,9 +33,9 @@ class RegistroCliente : AppCompatActivity() {
         MyToolbar.show(this, "Registro cliente", true)
         mDialog = SpotsDialog.Builder().setContext(this@RegistroCliente).setMessage("Espere un momento").build()
         mTextInputNombre = findViewById(R.id.textInputNombreS)
-        mTextInputCorreo = findViewById(R.id.textInputCorreoS)
-        mTextInputPass = findViewById(R.id.textInputPassS)
-        btnRegistrar = findViewById(R.id.btnRegistrarS)
+        mTextInputCorreo = findViewById(R.id.correo_textEdit)
+        mTextInputPass = findViewById(R.id.password_textEdit)
+        btnRegistrar = findViewById(R.id.registrar_buttonC)
         btnRegistrar.setOnClickListener { clickRegister() }
     }
 

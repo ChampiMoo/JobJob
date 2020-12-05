@@ -5,58 +5,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/colorPrimaryDark"
     tools:context=".activities.OptAuth">
 
-
-   <include layout="@layout/action_bar_toollbar"/>
+   <include layout="@layout/action_bar_toolbar"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <ImageView
             android:layout_width="150dp"
-            android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:layout_height="150dp"
             android:src="@drawable/logo"
-            />
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name" />
 
         <TextView
+            style="@style/TextAppearance.AppTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="JOB JOB 2.0"
+            android:text="@string/app_name"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:layout_margin="40dp"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:layout_margin="40dp"/>
+    </LinearLayout>
 
-        <Button
-            android:id="@+id/btnRegistrar"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Theme.Button.AppTheme"
+            android:id="@+id/iniciar_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:background="@drawable/redondeado_boton"
-            android:backgroundTint="#FFFFFF"
-            android:text="Registrarme"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/iniciar"/>
 
-            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/line"/>
 
-        <Button
-            android:id="@+id/btnLogin"
+        <com.google.android.material.button.MaterialButton
+            style="@style/Theme.Button.Outline.AppTheme"
+            android:id="@+id/registrar_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:background="@drawable/redondeado_boton"
-            android:backgroundTint="#FFFFFF"
-
-            android:text="Ya tengo una cuenta" />
-
-
-
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginStart="45dp"
+            android:text="@string/registrarme" />
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

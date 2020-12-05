@@ -37,9 +37,9 @@ class RegistroSocios : AppCompatActivity() {
         mTextInputOficioS = findViewById(R.id.textInputOficioS)
         mTextInputTelS = findViewById(R.id.textInputTelS)
         mTextInputNombreS = findViewById(R.id.textInputNombreS)
-        mTextInputCorreoS = findViewById(R.id.textInputCorreoS)
-        mTextInputPassS = findViewById(R.id.textInputPassS)
-        btnRegistrarS = findViewById(R.id.btnRegistrarS)
+        mTextInputCorreoS = findViewById(R.id.correo_textEdit)
+        mTextInputPassS = findViewById(R.id.password_textEdit)
+        btnRegistrarS = findViewById(R.id.registrar_buttonC)
         btnRegistrarS.setOnClickListener { clickRegister() }
     }
 

@@ -92,7 +92,6 @@ class MapSocio : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
         mMap!!.mapType = GoogleMap.MAP_TYPE_NORMAL
-        mMap!!.uiSettings.isZoomControlsEnabled = true
         mLocationRequest = LocationRequest()
         mLocationRequest!!.interval = 1000
         mLocationRequest!!.fastestInterval = 1000
@@ -107,7 +106,7 @@ class MapSocio : AppCompatActivity(), OnMapReadyCallback {
                 if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                     if (gpsActived()) {
                         mFusedLocation!!.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper())
-                        mMap!!.isMyLocationEnabled = true
+                        mMap!!.isMyLocationEnabled = false
                     } else {
                         showAlertDialogNOGPS()
                     }
@@ -124,17 +123,10 @@ class MapSocio : AppCompatActivity(), OnMapReadyCallback {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == SETTINGS_REQUEST_CODE && gpsActived()) {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
                 return
             }
             mFusedLocation!!.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper())
-            mMap!!.isMyLocationEnabled = true
+            mMap!!.isMyLocationEnabled = false
         } else {
             showAlertDialogNOGPS()
         }
@@ -157,7 +149,7 @@ class MapSocio : AppCompatActivity(), OnMapReadyCallback {
 
     private fun disconect() {
         if (mFusedLocation != null) {
-            btnConnect.text = "Conectarse"
+            btnConnect.text = resources.getString(R.string.conectarse)
             isConnect = false
             mFusedLocation!!.removeLocationUpdates(mLocationCallback)
             if (mAuthProvider!!.existSession()) {
@@ -172,10 +164,10 @@ class MapSocio : AppCompatActivity(), OnMapReadyCallback {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 if (gpsActived()) {
-                    btnConnect.text = "Desconectarse"
+                    btnConnect.text = resources.getString(R.string.desconectarse)
                     isConnect = true
                     mFusedLocation!!.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper())
-                    mMap!!.isMyLocationEnabled = true
+                    mMap!!.isMyLocationEnabled = false
                 } else {
                     showAlertDialogNOGPS()
                 }
@@ -185,7 +177,7 @@ class MapSocio : AppCompatActivity(), OnMapReadyCallback {
         } else {
             if (gpsActived()) {
                 mFusedLocation!!.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper())
-                mMap!!.isMyLocationEnabled = true
+                mMap!!.isMyLocationEnabled = false
             } else {
                 showAlertDialogNOGPS()
             }

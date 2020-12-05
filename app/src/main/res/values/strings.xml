@@ -1,9 +1,19 @@
 <resources>
     <string name="app_name">JobJob</string>
-    <string-array name="Spinner_items">
-        <item>Plomero</item>
-        <item>Electricista</item>
-
-
-    </string-array>
+    <string name="cliente">Cliente</string>
+    <string name="socio">Socio</string>
+    <string name="correo">Correo</string>
+    <string name="password">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="registrarme">Registrarme</string>
+    <string name="registrar">Registrar</string>
+    <string name="lugar">Lugar</string>
+    <string name="solicitar">Solicitar</string>
+    <string name="oficio">Oficio</string>
+    <string name="nombre">Nombre Completo</string>
+    <string name="telefono">Telefono</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="conectarse">Conectarse</string>
+    <string name="desconectarse">Desconectarse</string>
 </resources>

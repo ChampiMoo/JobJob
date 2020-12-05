@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     tools:context=".activities.socios.MapSocio">
 
-    <include layout="@layout/action_bar_toollbar"></include>
+    <include layout="@layout/action_bar_toolbar"></include>
 
     <fragment
         android:id="@+id/map"
@@ -23,9 +23,7 @@
         android:text="Conectarse"
         android:layout_gravity="bottom"
         android:layout_margin="30dp"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/redondeado_boton"
-        android:backgroundTint="@color/colorPrimaryDark"/>
+        android:textColor="#FFFFFF"/>
 
 
 

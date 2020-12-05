@@ -5,149 +5,126 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    app:statusBarBackground="?attr/colorPrimary"
     tools:context=".activities.clientes.RegistroCliente">
 
-    <include layout="@layout/action_bar_toollbar"/>
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        android:layout_marginTop="20dp">
-
-
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="5dp">
+            android:gravity="center"
+            android:orientation="vertical">
 
-
-
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:src="@drawable/user"
-                android:layout_margin="10dp"/>
-
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputNombreS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Nombre Completo"
-                    android:inputType="text" />
-
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="10dp">
+            <include layout="@layout/action_bar_toolbar"/>
 
             <ImageView
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:src="@drawable/email"
-                android:layout_margin="5dp"/>
+                android:layout_width="150dp"
+                android:layout_gravity="center"
+                android:layout_height="150dp"
+                android:layout_marginTop="105dp"
+                android:layout_marginBottom="25dp"
+                android:src="@drawable/logo"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/app_name"/>
 
-
-            <com.google.android.material.textfield.TextInputLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputCorreoS"
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/user"
+                    android:layout_margin="10dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/app_name" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Theme.TextLayout.AppTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.TextEdit.AppTheme"
+                        android:id="@+id/textInputNombreS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nombre"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/email"
+                    android:layout_margin="5dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/app_name" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Theme.TextLayout.AppTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.TextEdit.AppTheme"
+                        android:id="@+id/correo_textEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/correo"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/password"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/app_name" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Theme.TextLayout.AppTheme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Correo"
-                    android:inputType="textEmailAddress" />
+                    app:passwordToggleEnabled="true">
 
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.TextEdit.AppTheme"
+                        android:id="@+id/password_textEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
 
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-
-
-
+            <com.google.android.material.button.MaterialButton
+                style="@style/Theme.Button.AppTheme"
+                android:id="@+id/registrar_buttonC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:text="@string/registrar"/>
         </LinearLayout>
-
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:orientation="horizontal"
-           android:layout_margin="10dp">
-
-
-           <ImageView
-               android:layout_width="45dp"
-               android:layout_height="45dp"
-               android:src="@drawable/password"
-               android:layout_margin="5dp"/>
-
-
-           <com.google.android.material.textfield.TextInputLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content">
-
-               <com.google.android.material.textfield.TextInputEditText
-                   android:id="@+id/textInputPassS"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:hint="Contraseña"
-                   android:inputType="textPassword" />
-
-
-
-           </com.google.android.material.textfield.TextInputLayout>
-
-
-       </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="bottom">
-
-        <Button
-            android:id="@+id/btnRegistrarS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:background="@drawable/redondeado_boton"
-
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:text="REGISTRAR" />
-
-
-    </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-    </LinearLayout>
-
-
+    </ScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

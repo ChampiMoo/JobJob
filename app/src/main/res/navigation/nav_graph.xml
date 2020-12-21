@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.res.jobjob.ui.main.MainFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_opcionInicioFragment"
+            app:destination="@id/opcionInicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/opcionInicioFragment"
+        android:name="com.res.jobjob.ui.opcion.OpcionInicioFragment"
+        android:label="@string/inicio"
+        tools:layout="@layout/fragment_opcion_inicio" >
+        <action
+            android:id="@+id/action_opcionInicioFragment_to_registrarFragment"
+            app:destination="@id/registrarFragment" />
+        <action
+            android:id="@+id/action_opcionInicioFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrarFragment"
+        android:name="com.res.jobjob.ui.registrar.RegistrarFragment"
+        android:label="@string/registrarse"
+        tools:layout="@layout/fragment_registrar" >
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.res.jobjob.ui.login.LoginFragment"
+        android:label="@string/iniciar"
+        tools:layout="@layout/fragment_login" >
+    </fragment>
+</navigation>

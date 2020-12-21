@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mapa"
+            android:title="@string/mapa"
+            android:icon="@drawable/ic_map"/>
+        <item
+            android:id="@+id/nav_servicios"
+            android:title="@string/servicios_solicitados"
+            android:icon="@drawable/ic_book"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:title="@string/settings"
+            android:icon="@drawable/ic_settings"/>
+        <item
+            android:id="@+id/nav_pagos"
+            android:title="@string/pagos"
+            android:icon="@drawable/ic_money"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_salir"
+            android:title="@string/salir"
+            android:icon="@drawable/ic_logout"/>
+    </group>
+
+</menu>

@@ -12,23 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.Clientes.RequestSocio"></activity>
+        <activity android:name=".ui.activitys.SocioActivity"></activity>
         <activity
-            android:name=".activities.Clientes.DetailRequest"
-            android:parentActivityName=".activities.Clientes.MapCliente" />
-        <activity android:name=".activities.Socios.MapSocio" />
-        <activity android:name=".activities.Clientes.MapCliente" />
-        <activity android:name=".activities.Socios.RegistroSocios" />
+            android:name=".ui.activitys.ClienteActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.Login"
-            android:parentActivityName=".activities.OptAuth" />
-        <activity
-            android:name=".activities.Clientes.RegistroCliente"
-            android:parentActivityName=".activities.OptAuth" />
-        <activity
-            android:name=".activities.OptAuth"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+            android:name=".ui.activitys.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -3,48 +3,26 @@
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
-        <item name="colorOnPrimary">@color/primaryLightColor</item>
-
+        <item name="colorOnPrimary">@color/primaryTextColor</item>
         <item name="colorSecondary">@color/secondaryColor</item>
         <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
         <item name="colorOnSecondary">@color/secondaryLightColor</item>
-
-        <item name="android:textColorPrimary">@color/primaryTextColor</item>
-
+        <item name="android:textColorPrimary">@color/secondaryTextColor</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor" tools:targetApi="l">@android:color/transparent</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
     </style>
 
-    <style name="Widget.ToolBar.Theme" parent="Widget.MaterialComponents.Toolbar">
-        <item name="android:theme">@style/AppTheme</item>
-        <item name="popupTheme">@style/Theme.MaterialComponents.Light</item>
-    </style>
-
-    <style name="TextAppearance.AppTheme" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="android:textSize">20sp</item>
+    <style name="TextAppearance.AppTheme.Tittle" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">22sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">?android:attr/colorPrimaryDark</item>
     </style>
 
-    <style name="Theme.TextLayout.AppTheme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="hintTextAppearance">@style/TextAppearance.AppTheme.TextInputLayout.HintText</item>
-        <item name="android:paddingBottom">8dp</item>
+    <style name="Widget.AppTheme.ToolBar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:theme">@style/AppTheme</item>
+        <item name="popupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
     </style>
 
-    <style name="TextAppearance.AppTheme.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
-        <item name="android:textColor">?android:attr/colorPrimary</item>
-    </style>
+    <style name="Widget.AppTheme.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
 
-    <style name="Widget.TextEdit.AppTheme" parent="Widget.AppCompat.EditText">
-        <item name="android:textColor">?android:attr/colorPrimary</item>
-    </style>
-
-    <style name="Theme.Button.AppTheme" parent="Widget.MaterialComponents.Button">
-        <item name="android:textColor">?android:attr/textColorPrimary</item>
-        <item name="android:padding">15dp</item>
-    </style>
-
-    <style name="Theme.Button.Outline.AppTheme" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:padding">15dp</item>
     </style>
 </resources>

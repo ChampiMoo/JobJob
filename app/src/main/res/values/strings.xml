@@ -1,19 +1,20 @@
 <resources>
     <string name="app_name">JobJob</string>
-    <string name="cliente">Cliente</string>
     <string name="socio">Socio</string>
-    <string name="correo">Correo</string>
-    <string name="password">Contraseña</string>
-    <string name="ingresar">Ingresar</string>
+    <string name="cliente">Cliente</string>
+    <string name="inicio">Inicio</string>
     <string name="iniciar">Iniciar</string>
-    <string name="registrarme">Registrarme</string>
     <string name="registrar">Registrar</string>
-    <string name="lugar">Lugar</string>
-    <string name="solicitar">Solicitar</string>
-    <string name="oficio">Oficio</string>
+    <string name="registrarse">Registrarse</string>
     <string name="nombre">Nombre Completo</string>
-    <string name="telefono">Telefono</string>
+    <string name="correo">Correo</string>
+    <string name="telefono">telefono</string>
+    <string name="password">Contraseña</string>
     <string name="cancelar">Cancelar</string>
-    <string name="conectarse">Conectarse</string>
-    <string name="desconectarse">Desconectarse</string>
+    <string name="mapa">Mapa</string>
+    <string name="servicios_solicitados">Servicios Solicitados</string>
+    <string name="servicios_realisados">Servicios Realisados</string>
+    <string name="settings">Configuración</string>
+    <string name="salir">Salir</string>
+    <string name="pagos">Metodos de Pago</string>
 </resources>
